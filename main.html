@@ -3,18 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DOM Load Function</title>
+    <title>DOM Load Example</title>
 </head>
 <body>
     <!-- Body is empty -->
 
     <script>
-        // Function to display message on DOM load
+        // Function to display a message when DOM is loaded
         function displayDOMMessage(message) {
             document.addEventListener("DOMContentLoaded", () => {
-                const p = document.createElement("p");
-                p.textContent = message;
-                document.body.appendChild(p);
+                // Write the message directly into the body
+                document.body.innerHTML = message;
             });
         }
 
