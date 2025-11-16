@@ -1,16 +1,25 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Load Function</title>
 </head>
-
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+    <!-- Body is empty -->
 
+    <script>
+        // Function to display message on DOM load
+        function displayDOMMessage(message) {
+            document.addEventListener("DOMContentLoaded", () => {
+                const p = document.createElement("p");
+                p.textContent = message;
+                document.body.appendChild(p);
+            });
+        }
+
+        // Call the function
+        displayDOMMessage("DOM load success");
+    </script>
 </body>
-
 </html>
